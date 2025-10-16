@@ -4,19 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webシステム構築基礎課題</title>
+        <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            
+            if (hours < 10) hours = '0' + hours;
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+            
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').innerHTML = timeString;
+        }
+        
+        setInterval(updateClock, 1000);
+        window.onload = updateClock;
+    </script>
 </head>
 <body>
-    <h1>Webシステム構築基礎 第２回課題　東晴孝（AAA24093）</h1>
-    <h2>課題１</h2>
+     <h1>現在時刻</h1>
+    <div id="clock" style="font-size: 48px; font-weight: bold; color: blue;">
+        00:00:00
+    </div>
+    <h2>Webシステム構築基礎 第２回課題　東晴孝（AAA24093）</h2>
+    <p>課題１</p>
     <div>
         <img src="https://raw.githubusercontent.com/omu-aaa24093/omu-aaa24093.github.io/refs/heads/main/food_omurice.png" width="300" height="200" alt="オムライスの写真">
-        <h2>お薦めの食べ物</h2>
+        <h3>お薦めの食べ物</h3>
         <p>
             <strong>オムライス</strong>
         </p>
     </div>
     <div>
-        <h3> 課題２へのリンク</h3>
+        <h4> 課題２へのリンク</h4>
         <p>
            <a href="second.html">2ページ目へ</a> 
         </p> 
