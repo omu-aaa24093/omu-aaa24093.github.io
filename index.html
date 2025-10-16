@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webシステム構築基礎課題</title>
-        <script>
-        function updateClock() {
-            var now = new Date();
-            var hours = now.getHours();
-            var minutes = now.getMinutes();
-            var seconds = now.getSeconds();
+    <script>
+     function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
             
-            if (hours < 10) hours = '0' + hours;
-            if (minutes < 10) minutes = '0' + minutes;
-            if (seconds < 10) seconds = '0' + seconds;
+        if (hours < 10) hours = '0' + hours;
+        if (minutes < 10) minutes = '0' + minutes;
+        if (seconds < 10) seconds = '0' + seconds;
             
-            var timeString = hours + ':' + minutes + ':' + seconds;
-            document.getElementById('clock').innerHTML = timeString;
-        }
+        var timeString = hours + ':' + minutes + ':' + seconds;
+        document.getElementById('clock').innerHTML = timeString;
+    }
         
-        setInterval(updateClock, 1000);
-        window.onload = updateClock;
-    </script>
+    setInterval(updateClock, 1000);
+    window.onload = updateClock;
+</script>
 </head>
 <body>
      <h1>現在時刻</h1>
